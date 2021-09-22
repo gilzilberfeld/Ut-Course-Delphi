@@ -71,3 +71,4 @@ modules/
 dunitx-results.xml
 # End of https://www.toptal.com/developers/gitignore/api/delphi
 Win32/Debug/dunitx-results.xml
+Win32/Debug/dunitx-results.xml
