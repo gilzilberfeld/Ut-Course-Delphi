@@ -6,17 +6,17 @@ uses d03.mocking.Car, d03.mocking.AirCondition, d03.mocking.acmode;
 
 type
    TDriver = class
-   constructor Create(newCar: TCar);
+   constructor Create(newCar: ICar);
    function CanDrive() : Boolean;
    procedure Drive();
    end;
 
 var
-  car : TCar;
+  car : ICar;
 
 implementation
 
-constructor TDriver.Create(newCar: TCar);
+constructor TDriver.Create(newCar: ICar);
 begin
     car := newCar;
 end;

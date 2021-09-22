@@ -13,7 +13,9 @@ uses
   DUnitX.Loggers.Xml.NUnit,
   {$ENDIF }
   DUnitX.TestFramework,
-  d02.FactorialTests in 'd02.FactorialTests.pas';
+  d02.FactorialTests in 'd02.FactorialTests.pas',
+  d03.mocking.ManualMock in 'd03.mocking.ManualMock.pas',
+  Unit1 in 'Unit1.pas';
 
 {$IFNDEF TESTINSIGHT}
 var
