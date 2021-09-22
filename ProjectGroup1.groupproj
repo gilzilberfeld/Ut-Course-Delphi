@@ -9,6 +9,9 @@
         <Projects Include="App.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Mocks\Source\DelphiMocks.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="App:Make">
         <MSBuild Projects="App.dproj" Targets="Make"/>
     </Target>
+    <Target Name="DelphiMocks">
+        <MSBuild Projects="Mocks\Source\DelphiMocks.dproj"/>
+    </Target>
+    <Target Name="DelphiMocks:Clean">
+        <MSBuild Projects="Mocks\Source\DelphiMocks.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiMocks:Make">
+        <MSBuild Projects="Mocks\Source\DelphiMocks.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Tests;App"/>
+        <CallTarget Targets="Tests;App;DelphiMocks"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Tests:Clean;App:Clean"/>
+        <CallTarget Targets="Tests:Clean;App:Clean;DelphiMocks:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Tests:Make;App:Make"/>
+        <CallTarget Targets="Tests:Make;App:Make;DelphiMocks:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
