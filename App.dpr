@@ -10,7 +10,8 @@ uses
   ex.Operations in 'ex.Operations.pas',
   d03.mocking.acmode in 'd03.mocking.acmode.pas',
   d03.mocking.AirCondition in 'd03.mocking.AirCondition.pas',
-  d03.mocking.Car in 'd03.mocking.Car.pas';
+  d03.mocking.Car in 'd03.mocking.Car.pas',
+  d03.mocking.Driver in 'd03.mocking.Driver.pas';
 
 {$R *.res}
 
