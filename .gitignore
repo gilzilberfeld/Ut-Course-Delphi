@@ -67,4 +67,7 @@ __recovery/
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
 
+# DUnit Results
+dunitx-results.xml
 # End of https://www.toptal.com/developers/gitignore/api/delphi
+Win32/Debug/dunitx-results.xml
