@@ -15,7 +15,7 @@ uses
   DUnitX.TestFramework,
   d02.FactorialTests in 'd02.FactorialTests.pas',
   d03.mocking.ManualMock in 'd03.mocking.ManualMock.pas',
-  Unit1 in 'Unit1.pas';
+  d03.mocking.DriverTests in 'd03.mocking.DriverTests.pas';
 
 {$IFNDEF TESTINSIGHT}
 var

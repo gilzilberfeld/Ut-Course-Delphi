@@ -89,7 +89,7 @@
         </DelphiCompile>
         <DCCReference Include="d02.FactorialTests.pas"/>
         <DCCReference Include="d03.mocking.ManualMock.pas"/>
-        <DCCReference Include="Unit1.pas"/>
+        <DCCReference Include="d03.mocking.DriverTests.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
