@@ -5,6 +5,7 @@ interface
 uses SysUtils, d03.mocking.AirCondition;
 
 type
+{$M+}
 ICar = interface(IInterface)
     Function IsRunning: Boolean;
     Procedure SetAC(ac: TAirCondition);

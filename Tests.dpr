@@ -15,7 +15,24 @@ uses
   DUnitX.TestFramework,
   d02.FactorialTests in 'd02.FactorialTests.pas',
   d03.mocking.ManualMock in 'd03.mocking.ManualMock.pas',
-  d03.mocking.DriverTests in 'd03.mocking.DriverTests.pas';
+  d03.mocking.DriverTests in 'd03.mocking.DriverTests.pas',
+  d03.mocking.DelphiMocks in 'd03.mocking.DelphiMocks.pas',
+  Delphi.Mocks.When in 'Mocks\Source\Delphi.Mocks.When.pas',
+  Delphi.Mocks in 'Mocks\Source\Delphi.Mocks.pas',
+  Delphi.Mocks.AutoMock in 'Mocks\Source\Delphi.Mocks.AutoMock.pas',
+  Delphi.Mocks.Expectation in 'Mocks\Source\Delphi.Mocks.Expectation.pas',
+  Delphi.Mocks.Behavior in 'Mocks\Source\Delphi.Mocks.Behavior.pas',
+  Delphi.Mocks.Helpers in 'Mocks\Source\Delphi.Mocks.Helpers.pas',
+  Delphi.Mocks.Proxy in 'Mocks\Source\Delphi.Mocks.Proxy.pas',
+  Delphi.Mocks.Proxy.TypeInfo in 'Mocks\Source\Delphi.Mocks.Proxy.TypeInfo.pas',
+  Delphi.Mocks.ReturnTypePatch in 'Mocks\Source\Delphi.Mocks.ReturnTypePatch.pas',
+  Delphi.Mocks.Utils in 'Mocks\Source\Delphi.Mocks.Utils.pas',
+  Delphi.Mocks.Validation in 'Mocks\Source\Delphi.Mocks.Validation.pas',
+  Delphi.Mocks.WeakReference in 'Mocks\Source\Delphi.Mocks.WeakReference.pas',
+  Delphi.Mocks.Interfaces in 'Mocks\Source\Delphi.Mocks.Interfaces.pas',
+  Delphi.Mocks.MethodData in 'Mocks\Source\Delphi.Mocks.MethodData.pas',
+  Delphi.Mocks.ObjectProxy in 'Mocks\Source\Delphi.Mocks.ObjectProxy.pas',
+  Delphi.Mocks.ParamMatcher in 'Mocks\Source\Delphi.Mocks.ParamMatcher.pas';
 
 {$IFNDEF TESTINSIGHT}
 var
