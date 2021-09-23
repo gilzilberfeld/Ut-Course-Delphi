@@ -30,7 +30,7 @@ procedure TDriver.Drive;
 var
   ac : TAirCondition;
 begin
-  ac.Create(AcOn);
+  ac := TAirCondition.Create(AcOn);
   car.SetAC(ac);
   car.Start();
 end;
