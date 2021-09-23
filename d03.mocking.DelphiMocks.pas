@@ -14,21 +14,37 @@ type
 
   public
     [Test]
-    procedure a_running_car();
+    procedure cannot_drive_a_running_car();
 
+    [Setup]
+    procedure Setup();
+
+    [TearDown]
+    procedure TearDown();
   end;
 
 implementation
 
-procedure TDriverTests_DelphiMock.a_running_car;
 var
   mockRunningCar: TMock<ICar>;
-  Driver: TDriver;
+  driver: TDriver;
+
+procedure TDriverTests_DelphiMock.Setup();
 begin
   mockRunningCar := TMock<ICar>.Create();
-  mockRunningCar.Setup.WillReturn(true).When.IsRunning();
   driver := TDriver.Create(mockRunningCar);
-  Assert.IsFalse(Driver.CanDrive());
+end;
+
+procedure TDriverTests_DelphiMock.TearDown();
+begin
+  mockRunningCar.Free;
+  driver.Free;
+end;
+
+procedure TDriverTests_DelphiMock.cannot_drive_a_running_car;
+begin
+  mockRunningCar.Setup.WillReturn(true).When.IsRunning();
+  Assert.IsFalse(driver.CanDrive());
 end;
 
 end.
