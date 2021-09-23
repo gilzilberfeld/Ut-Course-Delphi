@@ -5,7 +5,8 @@ interface
 uses
   DUnitX.TestFramework,
   Delphi.Mocks,
-  d03.mocking.Driver, d03.mocking.Car, d03.mocking.AirCondition, d03.mocking.ACmode;
+  d03.mocking.Driver, d03.mocking.Car, d03.mocking.AirCondition,
+  d03.mocking.ACmode;
 
 type
 
@@ -17,6 +18,9 @@ type
     procedure cannot_drive_a_running_car;
     [Test]
     procedure AC_is_set_before_we_drive;
+
+    [Test]
+    procedure AC_is_set_on_before_we_drive;
 
     [Setup]
     procedure Setup();
@@ -51,9 +55,22 @@ end;
 
 procedure TDriverTests_DelphiMock.AC_is_set_before_we_drive;
 begin
-  mockRunningCar.Setup.Expect.AtLeastOnce.When.SetAC(It(0).IsAny<TAirCondition>);
+  mockRunningCar.Setup.Expect.AtLeastOnce.When.SetAC
+    (It(0).IsAny<TAirCondition>);
   Driver.Drive;
   mockRunningCar.Verify();
 end;
 
+procedure TDriverTests_DelphiMock.AC_is_set_on_before_we_drive;
+var
+  dummyAC: TAirCondition;
+begin
+  dummyAC := TAirCondition.Create(AcOn);
+
+  mockRunningCar.Setup.Expect.AtLeastOnce.When.SetAC(
+    It(0).AreSameFieldsAndPropertiedThat(dummyAC));
+
+  Driver.Drive;
+  mockRunningCar.Verify;
+end;
 end.

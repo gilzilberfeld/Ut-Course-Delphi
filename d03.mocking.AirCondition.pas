@@ -7,13 +7,13 @@ uses
 
 type
   TAirCondition = class
+  private
+    mode: TACMode;
   public
     constructor Create(newMode: TACMode);
     Function GetACMode(): TACMode;
   end;
 
-var
-  mode: TACMode;
 
 implementation
 
