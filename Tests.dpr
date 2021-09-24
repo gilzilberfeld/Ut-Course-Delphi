@@ -32,7 +32,10 @@ uses
   Delphi.Mocks.Interfaces in 'Mocks\Delphi.Mocks.Interfaces.pas',
   Delphi.Mocks.MethodData in 'Mocks\Delphi.Mocks.MethodData.pas',
   Delphi.Mocks.ObjectProxy in 'Mocks\Delphi.Mocks.ObjectProxy.pas',
-  Delphi.Mocks.ParamMatcher in 'Mocks\Delphi.Mocks.ParamMatcher.pas';
+  Delphi.Mocks.ParamMatcher in 'Mocks\Delphi.Mocks.ParamMatcher.pas',
+  CalculatorDisplayTests in 'Tests\Exe\CalculatorDisplayTests.pas',
+  d04.tdd.FizzBuzzTests in 'Tests\Demo\d04.tdd.FizzBuzzTests.pas',
+  d04.tdd.TDiamondTests in 'Tests\Exe\d04.tdd.TDiamondTests.pas';
 
 {$IFNDEF TESTINSIGHT}
 var
