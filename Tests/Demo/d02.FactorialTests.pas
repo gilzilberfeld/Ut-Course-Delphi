@@ -3,7 +3,8 @@ unit d02.FactorialTests;
 interface
 
 uses
-  DUnitX.TestFramework, d02.factorial;
+  DUnitX.TestFramework,
+  d02.factorial;
 
 type
 
