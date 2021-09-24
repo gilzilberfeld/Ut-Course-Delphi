@@ -2,22 +2,20 @@ program App;
 
 uses
   Vcl.Forms,
-  MainForm in 'MainForm.pas' {Form2},
-  d01.coverage.Calculator in 'd01.coverage.Calculator.pas',
-  d01.coverage.CreditCard in 'd01.coverage.CreditCard.pas',
-  d02.factorial in 'd02.factorial.pas',
-  ex.CalculatorDisplay in 'ex.CalculatorDisplay.pas',
-  ex.Operations in 'ex.Operations.pas',
-  d03.mocking.acmode in 'd03.mocking.acmode.pas',
-  d03.mocking.AirCondition in 'd03.mocking.AirCondition.pas',
-  d03.mocking.Car in 'd03.mocking.Car.pas',
-  d03.mocking.Driver in 'd03.mocking.Driver.pas';
+  d01.coverage.Calculator in 'App\Demo\d01.coverage.Calculator.pas',
+  d01.coverage.CreditCard in 'App\Demo\d01.coverage.CreditCard.pas',
+  d02.factorial in 'App\Demo\d02.factorial.pas',
+  ex.CalculatorDisplay in 'App\Exe\ex.CalculatorDisplay.pas',
+  d03.mocking.acmode in 'App\Demo\d03.mocking.acmode.pas',
+  d03.mocking.AirCondition in 'App\Demo\d03.mocking.AirCondition.pas',
+  d03.mocking.Car in 'App\Demo\d03.mocking.Car.pas',
+  d03.mocking.Driver in 'App\Demo\d03.mocking.Driver.pas',
+  ex.Operations in 'App\Exe\ex.Operations.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.

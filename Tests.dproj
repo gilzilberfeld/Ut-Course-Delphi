@@ -87,26 +87,26 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="d02.FactorialTests.pas"/>
-        <DCCReference Include="d03.mocking.ManualMock.pas"/>
-        <DCCReference Include="d03.mocking.DriverTests.pas"/>
-        <DCCReference Include="d03.mocking.DelphiMocks.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.When.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.AutoMock.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.Expectation.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.Behavior.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.Helpers.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.Proxy.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.Proxy.TypeInfo.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.ReturnTypePatch.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.Utils.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.Validation.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.WeakReference.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.Interfaces.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.MethodData.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.ObjectProxy.pas"/>
-        <DCCReference Include="Mocks\Source\Delphi.Mocks.ParamMatcher.pas"/>
+        <DCCReference Include="Tests\Demo\d02.FactorialTests.pas"/>
+        <DCCReference Include="Tests\Demo\d03.mocking.ManualMock.pas"/>
+        <DCCReference Include="Tests\Demo\d03.mocking.DriverTests.pas"/>
+        <DCCReference Include="Tests\Demo\d03.mocking.DelphiMocks.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.When.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.AutoMock.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.Expectation.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.Behavior.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.Helpers.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.Proxy.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.Proxy.TypeInfo.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.ReturnTypePatch.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.Utils.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.Validation.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.WeakReference.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.Interfaces.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.MethodData.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.ObjectProxy.pas"/>
+        <DCCReference Include="Mocks\Delphi.Mocks.ParamMatcher.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -129,8 +129,8 @@
                 </Source>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -139,8 +139,8 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="iOSSimulator">
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -951,9 +951,9 @@
                 </DeployClass>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
