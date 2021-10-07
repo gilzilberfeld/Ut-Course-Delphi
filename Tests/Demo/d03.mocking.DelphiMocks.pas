@@ -3,6 +3,8 @@ unit d03.mocking.DelphiMocks;
 interface
 
 uses
+  SysUtils,
+  Rtti,
   DUnitX.TestFramework,
   Delphi.Mocks,
   d03.mocking.Driver, d03.mocking.Car, d03.mocking.AirCondition,
@@ -21,6 +23,12 @@ type
 
     [Test]
     procedure AC_is_set_on_before_we_drive;
+
+    [Test]
+    procedure check_raising_exception;
+
+    [Test]
+    procedure custom_execution;
 
     [Setup]
     procedure Setup();
@@ -72,5 +80,30 @@ begin
 
   Driver.Drive;
   mockRunningCar.Verify;
+end;
+
+procedure TDriverTests_DelphiMock.check_raising_exception;
+begin
+  mockRunningCar.Setup.WillRaise(Exception, 'ss').When.Start;
+  Assert.WillRaise(procedure
+    begin
+      mockRunningCar.Instance.Start;
+    end
+  )
+end;
+
+procedure TDriverTests_DelphiMock.custom_execution;
+var
+  num : Integer;
+begin
+     num := 0;
+     mockRunningCar.Setup.WillExecute(function (const args : TArray<TValue>; const returnType : TRttiType) : TValue
+     begin
+       num := 3;
+     end
+     ).When.Start;
+
+     mockRunningCar.Instance.Start;
+     Assert.AreEqual(3, num);
 end;
 end.
